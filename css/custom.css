@@ -1,0 +1,82 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 75px;
+}
+#container{
+    color: navajowhite;
+    width: 100%;
+    margin: 0!important;
+}
+#container > div{
+    height: 50%;
+}
+#bottom, #top{
+    padding: 0!important;
+}
+#rand, #play, #task, #timer{
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+#rand:hover, #play:hover{
+    font-size: 120%;
+    width: 120%;
+    transition: font-size 0.5s linear;
+}
+#rand:not( :hover ), #play:not( :hover ){
+    font-size: 100%;
+    width: 100%;
+    transition: font-size 0.5s linear;
+}
+#rand{
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+#play{
+    background-color: tomato;
+    cursor: pointer;
+}
+#task{
+    background-color: indigo;
+    cursor: default;
+}
+#timer{
+    background-color: darkcyan;
+    cursor: default;
+}
+.pads{
+    padding-top: calc(25% + 35px);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+#description, #time{
+    font-size: 40%;
+}
+.times{
+    text-align: center;
+    padding: 0!important;
+    float: left;
+}
+#minutes{
+    text-align: right;
+}
+#seconds{
+    text-align: left;
+}
+.clear{
+    clear: both;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

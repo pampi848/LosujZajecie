@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Losuj Zadanie</title>
+    <title id="title">Losuj Zadanie</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster|Quicksand|Raleway|Source+Sans+Pro|Varela+Round" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet"/>
+    <link id="icon" href="fav.png" rel="icon" type="image/x-icon"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
 </head>
 <body>
-    <div id="container">
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <div id="task">Task</div>
-                <div id="timer">0:00</div>
+    <div id="container" class="noselect">
+            <div id="top" class="col-xl-12">
+                <div id="task" class="col-xl-6">
+                    <div class="pads">Task</div>
+                    <div id='description'></div>
+                </div>
+                <div id="rand" class="col-xl-6" onclick="getTask()">
+                    <div class="pads">Get new Task</div>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <button id="rand">Get new Task</button>
-                <br/>
-                <button id="play">Start</button>
+            <div id="bottom" class="col-xl-12">
+                <div id="timer" class="col-xl-6">
+                    <div class="col-6 offset-3 pads float-left"><p id="minutes" class="times col-5">00</p><p class="times col-2">:</p><p id="seconds" class="times col-5">00</p></div><div class="col-3 float-left"></div>
+                    <div id="time" class="clear"></div>
+                </div>
+                <div id="play" class="col-xl-6">
+                    <div class="pads">Start</div>
+                </div>
             </div>
-        </div>
     </div>
-<script scr="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 </body>
