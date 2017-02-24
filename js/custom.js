@@ -135,7 +135,7 @@ $("#play").on("click",function () {
                 //end case
                 if(currentTask.time == min){
                     if(currentTask.matura)oneMaturaForDay = true;
-                    if(typeof currentTask.rest == "number" && !freetime){
+                    if(currentTask.rest != null && !freetime){
                         min = "00";
                         sec = "00";
                         freetime = true;
