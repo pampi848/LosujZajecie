@@ -34,7 +34,7 @@ var tasks = [
     new Task(4, "Short story of time", "Let's read a book.", 30, 5),
     new Task(4, "Memy", "Just scroll", 10, 0),
     new Task(0, "Gitara siema", "Let's play guitar hello.", 25, 10),
-    new Task(10, "Test", "ciążowyonie:///", 1)
+    new Task(10, "Test", "ciążowyonie:///", 1, 2)
 ];
 
 function getTask() {
@@ -145,6 +145,7 @@ $("#play").on("click",function () {
                         sec = "00";
                         freetime = true;
                         currentTask.name = "End of task";
+                        currentTask.time = currentTask.rest;
                     }
                     else{
                         freetime = false;
