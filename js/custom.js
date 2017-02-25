@@ -46,7 +46,12 @@ function getTask() {
             return drawLots();
         }
     }
-    else return drawLots();
+    else{
+        $("#play > div").html("Start");
+        timerClicked = !timerClicked;
+        changeFavicon("fav.png");
+        return drawLots();
+    }
 }
 
 function drawLots(){
@@ -145,6 +150,7 @@ $("#play").on("click",function () {
                         freetime = false;
                         clearInterval(timer);
                         $("#play > div").html("The End");
+                        currentTask = null;
                     }
                 }
 
