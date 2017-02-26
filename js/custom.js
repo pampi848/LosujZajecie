@@ -34,21 +34,21 @@ var tasks = [
     new Task(4, "Short story of time", "Let's read a book.", 30, 5),
     new Task(4, "Memy", "Just scroll", 10, 0),
     new Task(0, "Gitara siema", "Let's play guitar hello.", 25, 10),
-    new Task(10, "Test", "ciążowyonie:///", 1, 2)
+    new Task(10, "Test", "ciążowyonie:///", 1, 1)
 ];
 
 function getTask() {
     if(currentTask != null){
         if(confirm("Are you sure, you want change task?")){
             $("#play > div").html("Start");
-            timerClicked = !timerClicked;
+            timerClicked = false;
             changeFavicon("fav.png");
             return drawLots();
         }
     }
     else{
         $("#play > div").html("Start");
-        timerClicked = !timerClicked;
+        timerClicked = false;
         changeFavicon("fav.png");
         return drawLots();
     }
@@ -60,7 +60,6 @@ function drawLots(){
     var which = Math.floor(Math.random()*max);
     var randomProbability = Math.random() * 10;
 
-    console.log(tasks[which]);
     if(oneMaturaForDay && tasks[which].matura)return drawLots();
     if(randomProbability <= tasks[which].probability) return setTask(tasks[which]);
     else return drawLots();
@@ -108,12 +107,12 @@ $("#play").on("click",function () {
             $("#play > div").html("Start");
         }
         else {
+            $("#play > div").html("Stop");
             timer = setInterval(function () {
                 sec = parseInt(secondsElem.html());
                 min = parseInt(minutesElem.html());
                 sec++;
 
-                console.log(sec, min);
                 if (sec >= 60) {
                     sec = 0;
                     min++;
@@ -158,8 +157,6 @@ $("#play").on("click",function () {
                 secondsElem.html(sec);
                 minutesElem.html(min);
             }, 1000);
-            $("#play > div").html("Stop");
-
         }
         timerClicked = !timerClicked;
     }
